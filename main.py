@@ -11,25 +11,25 @@ BOARD_STATE = {}
 IS_INITIALISED = False
 
 # setup
-# GPIO.setmode(GPIO.BCM)
-# GPIO.setup(LED_PIN, GPIO.OUT)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(LED_PIN, GPIO.OUT)
 
 def initialize_pin(pin_id, pin_mode):
     if (pin_mode == "OUTPUT"):
-        # GPIO.setup(pin_id, GPIO.OUT)
+        GPIO.setup(pin_id, GPIO.OUT)
         pass
     elif (pin_mode == "INPUT"):
-        # GPIO.setup(pin_id, GPIO.IN)
+        GPIO.setup(pin_id, GPIO.IN)
         pass
 
     print("pin_id: ", pin_id, " has been initialized with mode: ", pin_mode)
 
 def set_pin_state_binary(pin_id, pin_state):
     if (pin_state == 1):
-        # GPIO.output(pin_id, GPIO.HIGH)
+        GPIO.output(pin_id, GPIO.HIGH)
         pass
     elif (pin_state == 0):
-        # GPIO.output(pin_id, GPIO.LOW)
+        GPIO.output(pin_id, GPIO.LOW)
         pass
     print("Pin no: ", pin_id, " has been set to: ", pin_state)
 
