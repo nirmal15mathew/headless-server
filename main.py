@@ -33,6 +33,12 @@ def set_pin_state_binary(pin_id, pin_state):
         pass
     print("Pin no: ", pin_id, " has been set to: ", pin_state)
 
+def read_pin_state(pin_id):
+    return GPIO.input(pin_id)
+
+def update_read_values(pin_id, pin_state):
+    pass
+
 def set_pin_state_analog(pin_id, pin_state):
     pass
     
